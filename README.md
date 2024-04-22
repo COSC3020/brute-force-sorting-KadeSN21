@@ -21,3 +21,5 @@ randomly without memory instead of systematically trying them?
 
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
+
+The best case runtime complexity for this algorithm is $O(1)$ where the input array is already sorted. The worst case runtime complexity for this algorithm is $O(n!)$, this is because the implemented algorithm (in the worst case) generates every possible permutation of the input array that there is. If permutations were generated randomly, the space taken in memory would decrease, however the time complexity would stay the same if not get logically worse, due to possible repeat permutations.
