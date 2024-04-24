@@ -1,22 +1,21 @@
 function permutationSort(a) {
-    if(a.length == 0) {
-        return 1
+    if (a.length === 0) {
+        return 1;
     }
     const permutations = permute(a);
-
-    let count = 0
+    let count = 0;
 
     for (let perm of permutations) {
-        count++
-
+        count++;
         if (isSorted(perm)) {
             for (let i = 0; i < a.length; i++) {
-                a[i] = perm[i] 
+                a[i] = perm[i];
             }
             return count;
         }
     }
 }
+
 
 function isSorted(arr) {
     for (let i = 1; i < arr.length; i++) {
@@ -32,11 +31,16 @@ function permute(arr, start = 0) {
         return [[...arr]];
     }
 
-    let result = []
+    let result = [];
+    let seen = new Set();
     for (let i = start; i < arr.length; i++) {
-        [arr[start], arr[i]] = [arr[i], arr[start]]
-        result = result.concat(permute(arr, start + 1))
-        [arr[start], arr[i]] = [arr[i], arr[start]]
+        if (!seen.has(arr[i])) {
+            [arr[start], arr[i]] = [arr[i], arr[start]];
+            result = result.concat(permute(arr, start + 1));
+            [arr[start], arr[i]] = [arr[i], arr[start]];
+            seen.add(arr[i]);
+        }
     }
     return result;
 }
+
