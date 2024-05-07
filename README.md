@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/7eEMzrNd)
 # Brute-Force Sorting
 
 We talked about the complexity of the sorting problem, and used an argument over
@@ -20,3 +21,7 @@ randomly without memory instead of systematically trying them?
 
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
+
+Both the best and worst case runtime complexity for this algorithm is $O(n!)$, This is because all perutations of the array are generated regardless of the order of input, or if an early permutation is sorted. If permutations were generated randomly, the space taken in memory would decrease, however the time complexity would stay the same if not get logically worse, as every possible permutation of the array must be constructed, and analyzed. The efficiency of this algorithm may decrease further due to possible repeat permutations.
+
+Help: ChatGPT and Stackoverflow.com
