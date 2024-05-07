@@ -23,3 +23,5 @@ Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
 
 Both the best and worst case runtime complexity for this algorithm is $O(n!)$, This is because all perutations of the array are generated regardless of the order of input, or if an early permutation is sorted. If permutations were generated randomly, the space taken in memory would decrease, however the time complexity would stay the same if not get logically worse, as every possible permutation of the array must be constructed, and analyzed. The efficiency of this algorithm may decrease further due to possible repeat permutations.
+
+Help: ChatGPT and Stackoverflow.com
